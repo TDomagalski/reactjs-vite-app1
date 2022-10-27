@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
@@ -6,18 +7,18 @@ export default function Navigation() {
       <div className="nav_logo">
         {/* <img src={Logo} alt="TomDom" /> */}
         {/* <LogoIcon /> */}
-        <h2>TomDom</h2>
+        <Link to="/">TomDom</Link>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="#">Link1</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Link2</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#">Link3</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
