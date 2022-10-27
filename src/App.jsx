@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import PageAbout from './pages/PageAbout';
 import PageContact from './pages/PageContact';
 import PageHome from './pages/PageHome';
+import PageNotFound from './pages/PageNotFound';
 
 // import createContext hook from react and create <ThemeContext.Provider> and wrap whoal App function
 export const ThemeContext = createContext(null);
@@ -40,6 +41,7 @@ function App() {
               <Route path="/" element={<PageHome />} />
               <Route path="/about" element={<PageAbout />} />
               <Route path="/contact" element={<PageContact />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
         </div>
