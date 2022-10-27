@@ -1,0 +1,360 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+} */
+/* @media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+} */
+#root {
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */
+.App {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.App#light {
+  background-color: #f3ebf6;
+  color: #242424;
+  border: #242424;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.App#light a {
+  color: #242424;
+}
+.App#light .btn_theme {
+  background-color: #242424;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.App#light .btn_theme .btn_theme-circle {
+  background-color: #f3ebf6;
+  left: calc(100% - 35px);
+}
+.App#dark {
+  background-color: #242424;
+  color: #f3ebf6;
+  border: #f3ebf6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.App#dark a {
+  color: #f3ebf6;
+}
+.App .App_optionbar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.App .App_optionbar .btn_theme {
+  width: 80px;
+  height: 40px;
+  margin: 20px;
+  border: none;
+  background-color: #f3ebf6;
+  border-radius: 50px;
+  padding: 5px 10px;
+  position: relative;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.App .App_optionbar .btn_theme .btn_theme-circle {
+  width: 25px;
+  height: 25px;
+  background-color: #242424;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: calc(0% + 10px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.App .App_main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.App .App_main #App_navigation {
+  border-bottom: 1px solid;
+  width: auto;
+}
+.App .App_main #App_navigation header {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.App .App_main #App_navigation header .nav_logo {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 2px;
+}
+.App .App_main #App_navigation header .nav_logo svg {
+  width: 40%;
+}
+.App .App_main #App_navigation header nav {
+  width: 100%;
+}
+.App .App_main #App_navigation header nav ul {
+  list-style-type: none;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.App .App_main #App_navigation header nav ul li {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+}
+.App .App_main #App_navigation header nav ul li a {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.App .App_main #App_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  padding: 15px;
+}
+
+@media (min-width: 720px) {
+  .App .App_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .App .App_main #App_navigation {
+    width: 20%;
+    height: auto;
+    border-bottom: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-right: 1px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .App .App_main #App_navigation header {
+    height: auto;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .App .App_main #App_navigation header .nav_logo {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 1rem;
+  }
+  .App .App_main #App_navigation header .nav_logo svg {
+    width: 100%;
+  }
+  .App .App_main #App_navigation header nav {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .App .App_main #App_navigation header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .App .App_main #App_navigation header nav ul li {
+    margin-bottom: 1rem;
+  }
+  .App .App_main #App_navigation header nav ul li:last-of-type {
+    margin-bottom: 0;
+  }
+  .App .App_main #App_navigation header .nav_footer {
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+  }
+  .App .App_main #App_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: scroll;
+    height: calc(100vh - 111px);
+  }
+}/*# sourceMappingURL=index.css.map */
