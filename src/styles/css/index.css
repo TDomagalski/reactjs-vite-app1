@@ -71,7 +71,7 @@ div {
   }
 } */
 .App {
-  width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,6 +186,7 @@ div {
           box-sizing: border-box;
 }
 .App .App_main #App_navigation header .nav_logo {
+  margin-top: 2rem;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
   width: 100%;
@@ -203,8 +204,8 @@ div {
           align-items: center;
   letter-spacing: 2px;
 }
-.App .App_main #App_navigation header .nav_logo svg {
-  width: 40%;
+.App .App_main #App_navigation header .nav_logo a {
+  width: 50%;
 }
 .App .App_main #App_navigation header nav {
   width: 100%;
@@ -254,7 +255,8 @@ div {
       -ms-flex-align: center;
           align-items: center;
   text-align: justify;
-  padding: 15px;
+  padding: 1rem;
+  letter-spacing: 1.5px;
 }
 
 @media (min-width: 720px) {
@@ -270,7 +272,10 @@ div {
             align-items: stretch;
   }
   .App .App_main #App_navigation {
-    width: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     height: auto;
     border-bottom: none;
     -webkit-box-sizing: border-box;
@@ -280,13 +285,24 @@ div {
     display: -ms-flexbox;
     display: flex;
   }
+  .App .App_main #App_navigation.close {
+    -ms-flex-preferred-size: 5%;
+        flex-basis: 5%;
+  }
+  .App .App_main #App_navigation.open {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
   .App .App_main #App_navigation header {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     height: auto;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
   }
   .App .App_main #App_navigation header .nav_logo {
+    margin-top: 0;
     -ms-flex-preferred-size: 15%;
         flex-basis: 15%;
     width: 100%;
@@ -307,8 +323,8 @@ div {
         flex-wrap: wrap;
     padding: 1rem;
   }
-  .App .App_main #App_navigation header .nav_logo svg {
-    width: 100%;
+  .App .App_main #App_navigation header .nav_logo a {
+    min-width: 3rem;
   }
   .App .App_main #App_navigation header nav {
     width: 100%;

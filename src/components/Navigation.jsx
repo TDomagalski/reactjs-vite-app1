@@ -1,19 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import TomDomLogo from '../assets/TomDomLogo';
 
 export default function Navigation() {
   return (
     <header>
       <div className="nav_logo">
-        {/* <img src={Logo} alt="TomDom" /> */}
-        {/* <LogoIcon /> */}
-        <Link to="/">TomDom</Link>
+        {/* <Link to="/">TomDom</Link> */}
+        <Link to="/">
+          <TomDomLogo />
+        </Link>
       </div>
       <nav>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/about">About</Link>
           </li>

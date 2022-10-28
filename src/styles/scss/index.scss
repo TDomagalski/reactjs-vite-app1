@@ -75,6 +75,12 @@ div {
 } */
 
 .App {
+  width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+
 	&#light {
 		background-color: $color-bg-white;
 		color: $color-font-dark;
@@ -140,12 +146,6 @@ div {
 		}
 	}
 
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: stretch;
-
 	.App_main {
 		flex-grow: 1;
 		// ~~ NAVBAR
@@ -162,6 +162,7 @@ div {
 				box-sizing: border-box;
 
 				.nav_logo {
+          margin-top: 2rem;
 					flex-basis: 15%;
 					width: 100%;
 					display: flex;
@@ -170,9 +171,9 @@ div {
 					align-items: center;
 					letter-spacing: 2px;
 
-					svg {
-						width: 40%;
-					}
+					a {
+            width: 50%;
+          }
 				}
 				nav {
 					width: 100%;
@@ -208,7 +209,8 @@ div {
 			justify-content: flex-start;
 			align-items: center;
 			text-align: justify;
-			padding: 15px;
+			padding: 1rem;
+      letter-spacing: 1.5px;
 		}
 	}
 }
@@ -220,14 +222,26 @@ div {
 			display: flex;
 			justify-content: flex-start;
 			align-items: stretch;
+
 			#App_navigation {
-				width: 20%;
+
+        &.close {
+          flex-basis: 5%;
+        }
+
+        &.open {
+          flex-basis: 20%;
+        }
+
+				flex-basis: 20%;
+        flex-shrink: 0;
 				height: auto;
 				border-bottom: none;
 				box-sizing: border-box;
 				border-right: 1px solid;
 				display: flex;
 				header {
+          flex-basis: 100%;
 					height: auto;
 					align-items: stretch;
 					// position: sticky;
@@ -236,6 +250,7 @@ div {
 					// width: 10%;
 
 					.nav_logo {
+            margin-top: 0;
 						flex-basis: 15%;
 						width: 100%;
 						display: flex;
@@ -245,13 +260,15 @@ div {
 						flex-wrap: wrap;
 						padding: 1rem;
 
-						svg {
-							width: 100%;
-						}
+            a {
+              min-width: 3rem;
+            }
 					}
+
 					nav {
 						width: 100%;
 						flex-grow: 1;
+
 						ul {
 							list-style-type: none;
 							padding: 0;

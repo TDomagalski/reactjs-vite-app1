@@ -33,7 +33,7 @@ function App() {
           </button>
         </div>
         <div className="App_main">
-          <div id="App_navigation">
+          <div id="App_navigation" className="close">
             <Navigation />
           </div>
           <div id="App_content">
