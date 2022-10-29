@@ -91,11 +91,8 @@ div {
 		}
 
 		.btn_theme {
-			background-color: $color-bg-dark;
-
-			justify-content: flex-end;
 			.btn_theme-circle {
-				background-color: $color-bg-white;
+				background-color: $color-bg-green;
 				left: calc(100% - (25px + 10px));
 			}
 		}
@@ -114,6 +111,10 @@ div {
 		a {
 			color: $color-font-white;
 		}
+
+    .btn_theme-circle {
+      background-color: $color-bg-dark;
+    }
 
     .App_nav-btn {
       background-color: $color-bg-white;
@@ -135,6 +136,7 @@ div {
 			border: none;
 			background-color: $color-bg-white;
 			border-radius: 50px;
+      border: 1px solid $color-border-default;
 			padding: 5px 10px;
 			position: relative;
 			transition: 0.25s;
@@ -143,7 +145,6 @@ div {
 			.btn_theme-circle {
 				width: 25px;
 				height: 25px;
-				background-color: $color-bg-dark;
 				border-radius: 50%;
 				position: absolute;
 				top: 50%;
