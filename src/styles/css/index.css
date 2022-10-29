@@ -89,7 +89,6 @@ div {
 .App#light {
   background-color: #f3ebf6;
   color: #242424;
-  border: #242424;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -106,20 +105,27 @@ div {
   background-color: #f3ebf6;
   left: calc(100% - 35px);
 }
+.App#light .App_nav-btn {
+  background-color: #242424;
+  color: #f3ebf6;
+}
 .App#dark {
   background-color: #242424;
   color: #f3ebf6;
-  border: #f3ebf6;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 .App#dark a {
   color: #f3ebf6;
 }
+.App#dark .App_nav-btn {
+  background-color: #f3ebf6;
+  color: #242424;
+}
 .App .App_optionbar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #8f8a90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +168,7 @@ div {
           flex-grow: 1;
 }
 .App .App_main #App_navigation {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #8f8a90;
   width: auto;
 }
 .App .App_main #App_navigation .App_nav-btn {
@@ -287,7 +293,7 @@ div {
     border-bottom: none;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border-right: 1px solid;
+    border-right: 1px solid #8f8a90;
     -webkit-transition: 0.25s;
     transition: 0.25s;
   }
@@ -298,12 +304,12 @@ div {
     width: 50px;
     height: 50px;
     border-top: none;
-    border-bottom: 1px solid #f3ebf6;
-    border-right: 1px solid #f3ebf6;
+    border-bottom: 1px solid #8f8a90;
+    border-right: 1px solid #8f8a90;
+    font-size: 1.2rem;
+    font-weight: 700;
     border-left: none;
     text-align: center;
-    color: #f3ebf6;
-    background-color: #242424;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -314,6 +320,8 @@ div {
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
   }
   .App .App_main #App_navigation.close {
     -ms-flex-preferred-size: 5%;
