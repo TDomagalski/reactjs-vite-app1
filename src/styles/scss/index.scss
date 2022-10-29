@@ -152,6 +152,11 @@ div {
 		#App_navigation {
 			border-bottom: 1px solid;
 			width: auto;
+
+      .App_nav-btn {
+        display: none;
+      }
+
 			header {
 				height: auto;
 				display: flex;
@@ -173,6 +178,7 @@ div {
 
 					a {
             width: 50%;
+            transition: 0.25s;
           }
 				}
 				nav {
@@ -224,6 +230,34 @@ div {
 			align-items: stretch;
 
 			#App_navigation {
+        position: relative;
+        display: block;
+        flex-basis: 20%;
+        flex-shrink: 0;
+				height: auto;
+				border-bottom: none;
+				box-sizing: border-box;
+				border-right: 1px solid;
+        transition: 0.25s;
+
+        .App_nav-btn {
+          position: absolute;
+          top: 0;
+          right: -51px;
+          width: 50px;
+          height: 50px;
+          border-top: none;
+          border-bottom: 1px solid $color-border-white;
+          border-right: 1px solid $color-border-white;
+          border-left: none;
+          text-align: center;
+          color: $color-font-white;
+          background-color: $color-bg-dark;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
 
         &.close {
           flex-basis: 5%;
@@ -232,22 +266,9 @@ div {
         &.open {
           flex-basis: 20%;
         }
-
-				flex-basis: 20%;
-        flex-shrink: 0;
-				height: auto;
-				border-bottom: none;
-				box-sizing: border-box;
-				border-right: 1px solid;
-				display: flex;
+        
 				header {
-          flex-basis: 100%;
-					height: auto;
-					align-items: stretch;
-					// position: sticky;
-					// top: 0;
-					// left: 0;
-					// width: 10%;
+          height: 100%;
 
 					.nav_logo {
             margin-top: 0;
@@ -296,7 +317,7 @@ div {
 				flex-direction: column;
 				justify-content: flex-start;
 				align-items: center;
-				overflow-y: scroll;
+				overflow-y: auto;
 				height: calc(100vh - 111px);
 			}
 		}

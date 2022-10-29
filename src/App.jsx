@@ -13,10 +13,15 @@ export const ThemeContext = createContext(null);
 function App() {
   // create useState hook to change light <-> dark
   const [theme, setTheme] = useState('dark');
+  const [navBtnMore, setNavBtnMore] = useState('close');
 
   const toggleTheme = () => {
     // function setTheme dark <-> light from useState hook
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+  };
+
+  const toggleNavBtn = () => {
+    setNavBtnMore((curr) => (curr === 'close' ? 'open' : 'close'));
   };
   return (
     // function toggleTheme change value in theme variable
@@ -33,7 +38,14 @@ function App() {
           </button>
         </div>
         <div className="App_main">
-          <div id="App_navigation" className="close">
+          <div id="App_navigation" className={navBtnMore}>
+            <button
+              type="submit"
+              className="App_nav-btn"
+              onClick={() => toggleNavBtn()}
+            >
+              btn
+            </button>
             <Navigation />
           </div>
           <div id="App_content">

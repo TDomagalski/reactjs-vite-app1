@@ -165,6 +165,9 @@ div {
   border-bottom: 1px solid;
   width: auto;
 }
+.App .App_main #App_navigation .App_nav-btn {
+  display: none;
+}
 .App .App_main #App_navigation header {
   height: auto;
   display: -webkit-box;
@@ -206,6 +209,8 @@ div {
 }
 .App .App_main #App_navigation header .nav_logo a {
   width: 50%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 .App .App_main #App_navigation header nav {
   width: 100%;
@@ -272,6 +277,8 @@ div {
             align-items: stretch;
   }
   .App .App_main #App_navigation {
+    position: relative;
+    display: block;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     -ms-flex-negative: 0;
@@ -281,9 +288,32 @@ div {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border-right: 1px solid;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  .App .App_main #App_navigation .App_nav-btn {
+    position: absolute;
+    top: 0;
+    right: -51px;
+    width: 50px;
+    height: 50px;
+    border-top: none;
+    border-bottom: 1px solid #f3ebf6;
+    border-right: 1px solid #f3ebf6;
+    border-left: none;
+    text-align: center;
+    color: #f3ebf6;
+    background-color: #242424;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
   }
   .App .App_main #App_navigation.close {
     -ms-flex-preferred-size: 5%;
@@ -294,12 +324,7 @@ div {
         flex-basis: 20%;
   }
   .App .App_main #App_navigation header {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    height: auto;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    height: 100%;
   }
   .App .App_main #App_navigation header .nav_logo {
     margin-top: 0;
@@ -370,7 +395,7 @@ div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100vh - 111px);
   }
 }/*# sourceMappingURL=index.css.map */

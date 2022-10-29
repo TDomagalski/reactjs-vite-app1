@@ -6,7 +6,6 @@ export default function Navigation() {
   return (
     <header>
       <div className="nav_logo">
-        {/* <Link to="/">TomDom</Link> */}
         <Link to="/">
           <TomDomLogo />
         </Link>
@@ -22,7 +21,7 @@ export default function Navigation() {
         </ul>
       </nav>
       <div className="nav_footer">
-        <h6>footer navigation</h6>
+        <h6>TomDom Corp.</h6>
       </div>
     </header>
   );
