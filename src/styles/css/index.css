@@ -72,6 +72,7 @@ div {
 } */
 .App {
   width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,8 +90,12 @@ div {
 .App#light {
   background-color: #f3ebf6;
   color: #242424;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 .App#light a {
   color: #242424;
@@ -103,18 +108,18 @@ div {
   background-color: #242424;
   color: #f3ebf6;
 }
-.App#light .App_nav-btn svg {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
 .App#light .nav_footer {
   color: #242424;
 }
 .App#dark {
   background-color: #242424;
   color: #f3ebf6;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 .App#dark a {
   color: #f3ebf6;
@@ -153,8 +158,8 @@ div {
   border: 2px solid #8f8a90;
   padding: 5px 10px;
   position: relative;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
   cursor: pointer;
 }
 .App .App_optionbar .btn_theme .btn_theme-circle {
@@ -166,8 +171,8 @@ div {
   left: calc(0% + 10px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .App .App_main {
   -webkit-box-flex: 1;
@@ -222,8 +227,8 @@ div {
 }
 .App .App_main #App_navigation header .nav_logo a {
   width: 50%;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .App .App_main #App_navigation header nav {
   width: 100%;
@@ -305,8 +310,14 @@ div {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border-right: 1px solid #8f8a90;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
+    -webkit-transition-property: -webkit-flex-basis;
+    transition-property: -webkit-flex-basis;
+    transition-property: flex-basis;
+    transition-property: flex-basis, -webkit-flex-basis, -ms-flex-preferred-size;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
   }
   .App .App_main #App_navigation .App_nav-btn {
     position: absolute;
@@ -331,10 +342,18 @@ div {
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
-    -webkit-transition: 0.25s;
-    transition: 0.25s;
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
+    -webkit-transition: 0.25s all;
+    transition: 0.25s all;
+  }
+  .App .App_main #App_navigation .App_nav-btn svg {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
   }
   .App .App_main #App_navigation.close {
     -ms-flex-preferred-size: 5%;
@@ -343,8 +362,6 @@ div {
   .App .App_main #App_navigation.close .App_nav-btn svg {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
   }
   .App .App_main #App_navigation.open {
     -ms-flex-preferred-size: 20%;
@@ -353,8 +370,6 @@ div {
   .App .App_main #App_navigation.open .App_nav-btn svg {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
   }
   .App .App_main #App_navigation header {
     height: 100%;

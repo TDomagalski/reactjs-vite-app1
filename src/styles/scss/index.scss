@@ -76,6 +76,7 @@ div {
 
 .App {
   width: 100vw;
+  height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -84,7 +85,9 @@ div {
 	&#light {
 		background-color: $color-bg-white;
 		color: $color-font-dark;
-    transition: $transition250;
+    transition-property: background-color, color;
+    transition-timing-function: ease-in-out;
+    transition-duration: $transition250;
 
 		a {
 			color: $color-font-dark;
@@ -100,10 +103,6 @@ div {
     .App_nav-btn {
       background-color: $color-bg-dark;
       color: $color-font-white;
-      
-      svg {
-        transform: rotate(180deg);
-      }
     }
 
     .nav_footer {
@@ -114,7 +113,9 @@ div {
 	&#dark {
 		background-color: $color-bg-dark;
 		color: $color-font-white;
-    transition: $transition250;
+    transition-property: background-color, color;
+    transition-timing-function: ease-in-out;
+    transition-duration: $transition250;
 
 		a {
 			color: $color-font-white;
@@ -151,7 +152,7 @@ div {
       border: 2px solid $color-border-default;
 			padding: 5px 10px;
 			position: relative;
-			transition: $transition250;
+			transition: $transition250 ease-in-out;
 			cursor: pointer;
 
 			.btn_theme-circle {
@@ -162,7 +163,7 @@ div {
 				top: 50%;
 				left: calc(0% + 10px);
 				transform: translateY(-50%);
-				transition: $transition250;
+				transition: $transition250 ease-in-out;
 			}
 		}
 	}
@@ -200,7 +201,7 @@ div {
 
 					a {
             width: 50%;
-            transition: $transition250;
+            transition: $transition250 ease-in-out;
           }
 				}
 				nav {
@@ -267,8 +268,10 @@ div {
 				border-bottom: none;
 				box-sizing: border-box;
 				border-right: 1px solid $color-border-default;
-        transition: $transition400 ease-in-out;
-
+        // transition: $transition250 ease-in-out;
+        transition-property: flex-basis;
+        transition-timing-function: ease-in-out;
+        transition-duration: $transition250;
 
         .App_nav-btn {
           position: absolute;
@@ -287,13 +290,14 @@ div {
           justify-content: center;
           align-items: center;
           cursor: pointer;
-          transition: $transition250;
-          transition-delay: $transition400;
+          transition: $transition250 all;
 
           // ISSUE - doubled transition
-          // svg {
-          //   transition: $transition250;
-          // }
+          svg {
+            transition-property: transform;
+            transition-timing-function: ease-in-out;
+            transition-duration: $transition250;
+          }
         }
 
         &.close {
@@ -301,9 +305,8 @@ div {
 
           .App_nav-btn {
             svg {
-            transform: scaleY(1);
-            transition: $transition400;
-          }
+              transform: scaleY(1);
+            }
           }
         }
 
@@ -312,9 +315,8 @@ div {
 
           .App_nav-btn {
             svg {
-            transform: scaleX(-1);
-            transition: $transition400;
-          }
+              transform: scaleX(-1);
+            }
           }
         }
         
