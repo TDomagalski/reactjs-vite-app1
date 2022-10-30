@@ -103,6 +103,9 @@ div {
   background-color: #242424;
   color: #f3ebf6;
 }
+.App#light .nav_footer {
+  color: #242424;
+}
 .App#dark {
   background-color: #242424;
   color: #f3ebf6;
@@ -118,6 +121,9 @@ div {
 .App#dark .App_nav-btn {
   background-color: #f3ebf6;
   color: #242424;
+}
+.App#dark .nav_footer {
+  color: #f3ebf6;
 }
 .App .App_optionbar {
   -webkit-box-sizing: border-box;
@@ -140,7 +146,7 @@ div {
   border: none;
   background-color: #f3ebf6;
   border-radius: 50px;
-  border: 1px solid #8f8a90;
+  border: 2px solid #8f8a90;
   padding: 5px 10px;
   position: relative;
   -webkit-transition: 0.25s;
@@ -245,6 +251,10 @@ div {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
+.App .App_main #App_navigation header .nav_footer h6 {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
 .App .App_main #App_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,7 +306,7 @@ div {
   }
   .App .App_main #App_navigation .App_nav-btn {
     position: absolute;
-    top: 0;
+    top: 2px;
     right: -51px;
     width: 50px;
     height: 50px;

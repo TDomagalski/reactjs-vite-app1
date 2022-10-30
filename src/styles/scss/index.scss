@@ -101,12 +101,18 @@ div {
       background-color: $color-bg-dark;
       color: $color-font-white;
     }
+
+    .nav_footer {
+      color: $color-font-dark;
+    }
 	}
 
 	&#dark {
 		background-color: $color-bg-dark;
 		color: $color-font-white;
 		transition: 0.25s;
+
+
 
 		a {
 			color: $color-font-white;
@@ -119,6 +125,10 @@ div {
     .App_nav-btn {
       background-color: $color-bg-white;
       color: $color-font-dark;
+    }
+
+    .nav_footer {
+      color: $color-font-white;
     }
 	}
 
@@ -136,7 +146,7 @@ div {
 			border: none;
 			background-color: $color-bg-white;
 			border-radius: 50px;
-      border: 1px solid $color-border-default;
+      border: 2px solid $color-border-default;
 			padding: 5px 10px;
 			position: relative;
 			transition: 0.25s;
@@ -214,6 +224,13 @@ div {
 						}
 					}
 				}
+
+        .nav_footer {
+
+         h6 {
+              transition: 0.25s;
+            }
+        }
 			}
 		}
 
@@ -251,7 +268,7 @@ div {
 
         .App_nav-btn {
           position: absolute;
-          top: 0;
+          top: 2px;
           right: -51px;
           width: 50px;
           height: 50px;
