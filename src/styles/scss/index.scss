@@ -84,7 +84,7 @@ div {
 	&#light {
 		background-color: $color-bg-white;
 		color: $color-font-dark;
-		transition: 0.25s;
+		transition: $transition250;
 
 		a {
 			color: $color-font-dark;
@@ -110,7 +110,7 @@ div {
 	&#dark {
 		background-color: $color-bg-dark;
 		color: $color-font-white;
-		transition: 0.25s;
+		transition: $transition250;
 
 
 
@@ -149,7 +149,7 @@ div {
       border: 2px solid $color-border-default;
 			padding: 5px 10px;
 			position: relative;
-			transition: 0.25s;
+			transition: $transition250;
 			cursor: pointer;
 
 			.btn_theme-circle {
@@ -160,7 +160,7 @@ div {
 				top: 50%;
 				left: calc(0% + 10px);
 				transform: translateY(-50%);
-				transition: 0.25s;
+				transition: $transition250;
 			}
 		}
 	}
@@ -197,7 +197,7 @@ div {
 
 					a {
             width: 50%;
-            transition: 0.25s;
+            transition: $transition250;
           }
 				}
 				nav {
@@ -219,7 +219,7 @@ div {
 							padding: 1rem;
 
 							a {
-								transition: 0.25s;
+								transition: $transition250;
 							}
 						}
 					}
@@ -228,7 +228,7 @@ div {
         .nav_footer {
 
          h6 {
-              transition: 0.25s;
+              transition: $transition250;
             }
         }
 			}
@@ -264,11 +264,12 @@ div {
 				border-bottom: none;
 				box-sizing: border-box;
 				border-right: 1px solid $color-border-default;
-        transition: 0.25s;
+        transition: $transition500 ease-in-out;
+
 
         .App_nav-btn {
           position: absolute;
-          top: 2px;
+          top: 1px;
           right: -51px;
           width: 50px;
           height: 50px;
@@ -283,7 +284,7 @@ div {
           justify-content: center;
           align-items: center;
           cursor: pointer;
-          transition: 0.25s;
+          transition: $transition250;
         }
 
         &.close {
