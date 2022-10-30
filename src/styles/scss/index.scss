@@ -1,4 +1,4 @@
-@import "variables/variables.scss";
+@import "./variables.scss";
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -84,7 +84,7 @@ div {
 	&#light {
 		background-color: $color-bg-white;
 		color: $color-font-dark;
-		transition: $transition250;
+    transition: $transition250;
 
 		a {
 			color: $color-font-dark;
@@ -100,6 +100,10 @@ div {
     .App_nav-btn {
       background-color: $color-bg-dark;
       color: $color-font-white;
+      
+      svg {
+        transform: rotate(180deg);
+      }
     }
 
     .nav_footer {
@@ -110,9 +114,7 @@ div {
 	&#dark {
 		background-color: $color-bg-dark;
 		color: $color-font-white;
-		transition: $transition250;
-
-
+    transition: $transition250;
 
 		a {
 			color: $color-font-white;
@@ -167,6 +169,7 @@ div {
 
 	.App_main {
 		flex-grow: 1;
+
 		// ~~ NAVBAR
 		#App_navigation {
 			border-bottom: 1px solid $color-border-default;
@@ -264,7 +267,7 @@ div {
 				border-bottom: none;
 				box-sizing: border-box;
 				border-right: 1px solid $color-border-default;
-        transition: $transition500 ease-in-out;
+        transition: $transition400 ease-in-out;
 
 
         .App_nav-btn {
@@ -285,14 +288,27 @@ div {
           align-items: center;
           cursor: pointer;
           transition: $transition250;
+
+          // ISSUE - doubled transition
+          // svg {
+          //   transition: $transition250;
+          // }
         }
 
         &.close {
           flex-basis: 5%;
+
+          svg {
+            transform: scaleY(1);
+          }
         }
 
         &.open {
           flex-basis: 20%;
+
+          svg {
+            transform: scaleX(-1);
+          }
         }
         
 				header {

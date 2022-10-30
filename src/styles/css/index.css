@@ -103,6 +103,10 @@ div {
   background-color: #242424;
   color: #f3ebf6;
 }
+.App#light .App_nav-btn svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .App#light .nav_footer {
   color: #242424;
 }
@@ -301,8 +305,8 @@ div {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border-right: 1px solid #8f8a90;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   .App .App_main #App_navigation .App_nav-btn {
     position: absolute;
@@ -334,9 +338,17 @@ div {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
   }
+  .App .App_main #App_navigation.close svg {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
   .App .App_main #App_navigation.open {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+  .App .App_main #App_navigation.open svg {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
   }
   .App .App_main #App_navigation header {
     height: 100%;

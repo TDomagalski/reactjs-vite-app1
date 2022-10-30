@@ -6,6 +6,7 @@ import PageAbout from './pages/PageAbout';
 import PageContact from './pages/PageContact';
 import PageHome from './pages/PageHome';
 import PageNotFound from './pages/PageNotFound';
+import ArrowRight from './assets/ArrowRight';
 
 // import createContext hook from react and create <ThemeContext.Provider> and wrap whoal App function
 export const ThemeContext = createContext(null);
@@ -44,7 +45,7 @@ function App() {
               className="App_nav-btn"
               onClick={() => toggleNavBtn()}
             >
-              btn
+              <ArrowRight />
             </button>
             <Navigation />
           </div>
