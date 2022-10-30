@@ -333,22 +333,28 @@ div {
     cursor: pointer;
     -webkit-transition: 0.25s;
     transition: 0.25s;
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
   }
   .App .App_main #App_navigation.close {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
   }
-  .App .App_main #App_navigation.close svg {
+  .App .App_main #App_navigation.close .App_nav-btn svg {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   .App .App_main #App_navigation.open {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
   }
-  .App .App_main #App_navigation.open svg {
+  .App .App_main #App_navigation.open .App_nav-btn svg {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   .App .App_main #App_navigation header {
     height: 100%;

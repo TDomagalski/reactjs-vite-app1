@@ -288,6 +288,7 @@ div {
           align-items: center;
           cursor: pointer;
           transition: $transition250;
+          transition-delay: $transition400;
 
           // ISSUE - doubled transition
           // svg {
@@ -298,16 +299,22 @@ div {
         &.close {
           flex-basis: 5%;
 
-          svg {
+          .App_nav-btn {
+            svg {
             transform: scaleY(1);
+            transition: $transition400;
+          }
           }
         }
 
         &.open {
           flex-basis: 20%;
 
-          svg {
+          .App_nav-btn {
+            svg {
             transform: scaleX(-1);
+            transition: $transition400;
+          }
           }
         }
         
