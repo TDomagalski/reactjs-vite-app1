@@ -17,13 +17,13 @@ export default function Navigation() {
           <li>
             <Link to="/about">
               <NavAccountSVG />
-              <span>Create Account</span>
+              <span className="nav_ul-span">Create Account</span>
             </Link>
           </li>
           <li>
             <Link to="/contact">
               <NavContactSVG />
-              <span>Contact</span>
+              <span className="nav_ul-span">Contact</span>
             </Link>
           </li>
         </ul>
