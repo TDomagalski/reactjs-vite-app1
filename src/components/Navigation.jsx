@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import TomDomLogo from '../assets/TomDomLogo';
 import NavAccountSVG from '../assets/NavAccountSVG';
 import NavContactSVG from '../assets/NavContactSVG';
+import NavScoreSVG from '../assets/NavScoreSVG';
+import NavStatsSVG from '../assets/NavStatsSVG';
 
 export default function Navigation() {
   return (
@@ -15,9 +17,21 @@ export default function Navigation() {
       <nav>
         <ul className="nav_ul">
           <li>
-            <Link to="/about">
+            <Link to="/account">
               <NavAccountSVG />
               <span className="nav_ul-span">Create Account</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/score">
+              <NavScoreSVG />
+              <span className="nav_ul-span">Score</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/stats">
+              <NavStatsSVG />
+              <span className="nav_ul-span">Statistics</span>
             </Link>
           </li>
           <li>

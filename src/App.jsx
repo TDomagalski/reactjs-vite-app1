@@ -2,9 +2,11 @@ import { createContext, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import './styles/css/index.css';
 import Navigation from './components/Navigation';
-import PageAccount from './pages/PageAccount';
-import PageContact from './pages/PageContact';
 import PageHome from './pages/PageHome';
+import PageAccount from './pages/PageAccount';
+import PageScore from './pages/PageScore';
+import PageStats from './pages/PageStats';
+import PageContact from './pages/PageContact';
 import PageNotFound from './pages/PageNotFound';
 import ArrowRight from './assets/ArrowRight';
 
@@ -52,7 +54,9 @@ function App() {
           <div id="App_content">
             <Routes>
               <Route path="/" element={<PageHome />} />
-              <Route path="/about" element={<PageAccount />} />
+              <Route path="/account" element={<PageAccount />} />
+              <Route path="/score" element={<PageScore />} />
+              <Route path="/stats" element={<PageStats />} />
               <Route path="/contact" element={<PageContact />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

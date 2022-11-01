@@ -454,6 +454,7 @@ div {
     cursor: pointer;
     -webkit-transition: 0.25s all;
     transition: 0.25s all;
+    border-radius: 0px 0px 5px 0px;
   }
   .App .App_main #App_navigation .App_nav-btn svg {
     -webkit-transition-property: -webkit-transform;

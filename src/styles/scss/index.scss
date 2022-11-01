@@ -391,6 +391,7 @@ div {
           align-items: center;
           cursor: pointer;
           transition: $transition250 all;
+          border-radius: 0px 0px 5px 0px;
 
           // ISSUE - doubled transition !DONE!
           svg {
