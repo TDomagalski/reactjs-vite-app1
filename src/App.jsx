@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import './styles/css/index.css';
 import Navigation from './components/Navigation';
-import PageAbout from './pages/PageAbout';
+import PageAccount from './pages/PageAccount';
 import PageContact from './pages/PageContact';
 import PageHome from './pages/PageHome';
 import PageNotFound from './pages/PageNotFound';
@@ -52,7 +52,7 @@ function App() {
           <div id="App_content">
             <Routes>
               <Route path="/" element={<PageHome />} />
-              <Route path="/about" element={<PageAbout />} />
+              <Route path="/about" element={<PageAccount />} />
               <Route path="/contact" element={<PageContact />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

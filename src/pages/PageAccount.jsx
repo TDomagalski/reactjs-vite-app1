@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function PageAbout() {
+export default function PageAccount() {
   return (
     <>
-      <h1>About Page</h1>
+      <h1>Account</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
         repellendus dolor aliquam ad iure vel placeat nisi ducimus accusantium,

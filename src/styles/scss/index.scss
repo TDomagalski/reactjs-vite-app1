@@ -76,7 +76,8 @@ div {
 
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -89,7 +90,7 @@ div {
     transition-timing-function: ease-in-out;
     transition-duration: $transition250;
 
-		a {
+		a, p {
 			color: $color-font-dark;
 		}
 
@@ -97,7 +98,7 @@ div {
       background-color: $color-bg-dark;
 			.btn_theme-circle {
 				background-color: $color-bg-white;
-				left: calc(100% - (25px + 10px));
+				right: calc(100% - (25px + 10px));
 			}
 		}
 
@@ -105,8 +106,13 @@ div {
       background-color: $color-bg-dark;
       color: $color-font-white;
     }
-
+    
     .nav_footer {
+      color: $color-font-dark;
+    }
+
+    .App_content {
+      background-color: $color-bg-white;
       color: $color-font-dark;
     }
 	}
@@ -118,7 +124,7 @@ div {
     transition-timing-function: ease-in-out;
     transition-duration: $transition250;
 
-		a {
+		a, p {
 			color: $color-font-white;
 		}
 
@@ -132,6 +138,11 @@ div {
     }
 
     .nav_footer {
+      color: $color-font-white;
+    }
+
+    .App_content {
+      background-color: $color-bg-dark;
       color: $color-font-white;
     }
 	}
@@ -162,7 +173,7 @@ div {
 				border-radius: 50%;
 				position: absolute;
 				top: 50%;
-				left: calc(0% + 10px);
+				right: calc(0% + 10px);
 				transform: translateY(-50%);
 				transition: $transition250 ease-in-out;
 			}
@@ -189,9 +200,11 @@ div {
 				align-items: center;
 				flex-wrap: nowrap;
 				box-sizing: border-box;
+        padding: 0 20px;
+
 
 				.nav_logo {
-          margin-top: 2rem;
+          padding: 2rem;
 					flex-basis: 15%;
 					width: 100%;
 					display: flex;
@@ -199,17 +212,18 @@ div {
 					justify-content: space-around;
 					align-items: center;
 					letter-spacing: 2px;
+          border-bottom: 1px solid $color-border-default;
 
 					a {
             width: 50%;
             transition: $transition250 ease-in-out;
           }
 				}
+
 				nav {
 					width: 100%;
 					ul {
 						list-style-type: none;
-						// font-size: 22px;
 						font-weight: 700;
 						letter-spacing: 1.5px;
 						padding: 0;
@@ -224,13 +238,21 @@ div {
 							padding: 1rem;
 
 							a {
+                height: 100%;
+                display: inline-block;
 								transition: $transition250;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
 							}
 						}
 					}
 				}
 
         .nav_footer {
+          width: 100%;
+          border-top: 1px solid $color-border-default;
 
          h6 {
               transition: $transition250;
@@ -274,6 +296,69 @@ div {
         transition-timing-function: ease-in-out;
         transition-duration: $transition250;
 
+        &.close {
+          flex-basis: 5%;
+
+          .App_nav-btn {
+            svg {
+              transform: scaleY(1);
+            }
+          }
+                  
+          .nav_ul {
+            li {
+              a {
+                align-items: center;
+                svg {
+                  width: 60px;
+                  height: auto;
+                }
+                span {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        &.open {
+          flex-basis: 20%;
+
+          .App_nav-btn {
+            svg {
+              transform: scaleX(-1);
+            }
+          }
+          
+          .nav_ul {
+            li {
+              a {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                svg {
+                  width: 50px;
+                  height: auto;
+                  margin-right: 1rem;
+                }
+
+                span {
+                  display: block;
+                  width: auto;
+                  text-align: left;
+                  background-color: white;
+                  color: black;
+                  padding: 0.5rem 1rem;
+                  border: 1px solid $color-border-default;
+                  border-radius: 25px;
+                }
+              }
+            }
+          }
+        }
+
         .App_nav-btn {
           position: absolute;
           top: 1px;
@@ -293,31 +378,11 @@ div {
           cursor: pointer;
           transition: $transition250 all;
 
-          // ISSUE - doubled transition
+          // ISSUE - doubled transition !DONE!
           svg {
             transition-property: transform;
             transition-timing-function: ease-in-out;
             transition-duration: $transition250;
-          }
-        }
-
-        &.close {
-          flex-basis: 5%;
-
-          .App_nav-btn {
-            svg {
-              transform: scaleY(1);
-            }
-          }
-        }
-
-        &.open {
-          flex-basis: 20%;
-
-          .App_nav-btn {
-            svg {
-              transform: scaleX(-1);
-            }
           }
         }
         
@@ -325,7 +390,7 @@ div {
           height: 100%;
 
 					.nav_logo {
-            margin-top: 0;
+            margin: 0;
 						flex-basis: 15%;
 						width: 100%;
 						display: flex;
@@ -333,10 +398,9 @@ div {
 						justify-content: center;
 						align-items: center;
 						flex-wrap: wrap;
-						padding: 1rem;
 
             a {
-              min-width: 3rem;
+              min-width: 5rem;
             }
 					}
 
@@ -345,22 +409,30 @@ div {
 						flex-grow: 1;
 
 						ul {
-							list-style-type: none;
 							padding: 0;
-							display: flex;
 							flex-direction: column;
-							justify-content: flex-start;
-							align-items: stretch;
+              justify-content: flex-start;
 
 							li {
-								margin-bottom: 1rem;
+                flex-basis: auto;
+                box-sizing: border-box;
+                padding: 0;
+								margin-bottom: 2rem;
 
 								&:last-of-type {
 									margin-bottom: 0;
 								}
+
+                a {
+                  svg {
+                    width: 40px;
+                    height: auto;
+                  }
+                }
 							}
 						}
 					}
+
 					.nav_footer {
 						width: 100%;
 					}

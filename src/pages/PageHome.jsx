@@ -3,7 +3,7 @@ import React from 'react';
 export default function PageHome() {
   return (
     <>
-      <h1>TomDom Corporation</h1>
+      <h1>Cygański Mundial</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
         temporibus voluptatibus voluptatem dicta velit, dolorum alias ducimus

@@ -72,7 +72,8 @@ div {
 } */
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +98,7 @@ div {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-.App#light a {
+.App#light a, .App#light p {
   color: #242424;
 }
 .App#light .btn_theme {
@@ -105,13 +106,17 @@ div {
 }
 .App#light .btn_theme .btn_theme-circle {
   background-color: #f3ebf6;
-  left: calc(100% - 35px);
+  right: calc(100% - 35px);
 }
 .App#light .App_nav-btn {
   background-color: #242424;
   color: #f3ebf6;
 }
 .App#light .nav_footer {
+  color: #242424;
+}
+.App#light .App_content {
+  background-color: #f3ebf6;
   color: #242424;
 }
 .App#dark {
@@ -124,7 +129,7 @@ div {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-.App#dark a {
+.App#dark a, .App#dark p {
   color: #f3ebf6;
 }
 .App#dark .btn_theme-circle {
@@ -135,6 +140,10 @@ div {
   color: #242424;
 }
 .App#dark .nav_footer {
+  color: #f3ebf6;
+}
+.App#dark .App_content {
+  background-color: #242424;
   color: #f3ebf6;
 }
 .App .App_optionbar {
@@ -171,7 +180,7 @@ div {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: calc(0% + 10px);
+  right: calc(0% + 10px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.25s ease-in-out;
@@ -208,9 +217,10 @@ div {
       flex-wrap: nowrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0 20px;
 }
 .App .App_main #App_navigation header .nav_logo {
-  margin-top: 2rem;
+  padding: 2rem;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
   width: 100%;
@@ -227,6 +237,7 @@ div {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 2px;
+  border-bottom: 1px solid #8f8a90;
 }
 .App .App_main #App_navigation header .nav_logo a {
   width: 50%;
@@ -260,8 +271,27 @@ div {
   padding: 1rem;
 }
 .App .App_main #App_navigation header nav ul li a {
+  height: 100%;
+  display: inline-block;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.App .App_main #App_navigation header .nav_footer {
+  width: 100%;
+  border-top: 1px solid #8f8a90;
 }
 .App .App_main #App_navigation header .nav_footer h6 {
   -webkit-transition: 0.25s;
@@ -322,6 +352,64 @@ div {
     -webkit-transition-duration: 0.25s;
             transition-duration: 0.25s;
   }
+  .App .App_main #App_navigation.close {
+    -ms-flex-preferred-size: 5%;
+        flex-basis: 5%;
+  }
+  .App .App_main #App_navigation.close .App_nav-btn svg {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  .App .App_main #App_navigation.close .nav_ul li a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .App_main #App_navigation.close .nav_ul li a svg {
+    width: 60px;
+    height: auto;
+  }
+  .App .App_main #App_navigation.close .nav_ul li a span {
+    display: none;
+  }
+  .App .App_main #App_navigation.open {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .App .App_main #App_navigation.open .App_nav-btn svg {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .App .App_main #App_navigation.open .nav_ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .App_main #App_navigation.open .nav_ul li a svg {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  .App .App_main #App_navigation.open .nav_ul li a span {
+    display: block;
+    width: auto;
+    text-align: left;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: 1px solid #8f8a90;
+    border-radius: 25px;
+  }
   .App .App_main #App_navigation .App_nav-btn {
     position: absolute;
     top: 1px;
@@ -358,27 +446,11 @@ div {
     -webkit-transition-duration: 0.25s;
             transition-duration: 0.25s;
   }
-  .App .App_main #App_navigation.close {
-    -ms-flex-preferred-size: 5%;
-        flex-basis: 5%;
-  }
-  .App .App_main #App_navigation.close .App_nav-btn svg {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  .App .App_main #App_navigation.open {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-  }
-  .App .App_main #App_navigation.open .App_nav-btn svg {
-    -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-  }
   .App .App_main #App_navigation header {
     height: 100%;
   }
   .App .App_main #App_navigation header .nav_logo {
-    margin-top: 0;
+    margin: 0;
     -ms-flex-preferred-size: 15%;
         flex-basis: 15%;
     width: 100%;
@@ -397,10 +469,9 @@ div {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 1rem;
   }
   .App .App_main #App_navigation header .nav_logo a {
-    min-width: 3rem;
+    min-width: 5rem;
   }
   .App .App_main #App_navigation header nav {
     width: 100%;
@@ -409,11 +480,7 @@ div {
             flex-grow: 1;
   }
   .App .App_main #App_navigation header nav ul {
-    list-style-type: none;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -421,15 +488,21 @@ div {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
   }
   .App .App_main #App_navigation header nav ul li {
-    margin-bottom: 1rem;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 2rem;
   }
   .App .App_main #App_navigation header nav ul li:last-of-type {
     margin-bottom: 0;
+  }
+  .App .App_main #App_navigation header nav ul li a svg {
+    width: 40px;
+    height: auto;
   }
   .App .App_main #App_navigation header .nav_footer {
     width: 100%;
