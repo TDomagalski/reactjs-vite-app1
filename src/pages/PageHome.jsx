@@ -3,7 +3,7 @@ import React from 'react';
 export default function PageHome() {
   return (
     <>
-      <h1>Cygański Mundial</h1>
+      <h1 className="page_h1-left">Cygański Mundial</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
         temporibus voluptatibus voluptatem dicta velit, dolorum alias ducimus

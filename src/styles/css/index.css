@@ -112,10 +112,6 @@ div {
   background-color: #242424;
   color: #f3ebf6;
 }
-.App#light .nav_ul-span {
-  background-color: #242424;
-  color: #f3ebf6;
-}
 .App#light .nav_footer {
   color: #242424;
 }
@@ -140,10 +136,6 @@ div {
   background-color: #228B22;
 }
 .App#dark .App_nav-btn {
-  background-color: #f3ebf6;
-  color: #242424;
-}
-.App#dark .nav_ul-span {
   background-color: #f3ebf6;
   color: #242424;
 }
@@ -272,11 +264,11 @@ div {
       flex-wrap: wrap;
 }
 .App .App_main #App_navigation header nav ul li {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 1rem;
+  padding: 2rem;
 }
 .App .App_main #App_navigation header nav ul li a {
   height: 100%;
@@ -323,11 +315,35 @@ div {
       -ms-flex-align: center;
           align-items: center;
   text-align: justify;
-  padding: 1rem;
+  padding: 2rem;
   letter-spacing: 1.5px;
+}
+.App .App_main #App_content h1 {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+}
+.App .App_main #App_content .page_h1-left {
+  text-align: left;
 }
 
 @media (min-width: 720px) {
+  .App#light .nav_ul a {
+    -webkit-text-decoration-color: #f3ebf6;
+            text-decoration-color: #f3ebf6;
+  }
+  .App#light .nav_ul a .nav_ul-span {
+    background-color: #242424;
+    color: #f3ebf6;
+  }
+  .App#dark .nav_ul a {
+    -webkit-text-decoration-color: #242424;
+            text-decoration-color: #242424;
+  }
+  .App#dark .nav_ul a .nav_ul-span {
+    background-color: #f3ebf6;
+    color: #242424;
+  }
   .App .App_main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -539,6 +555,6 @@ div {
         -ms-flex-align: center;
             align-items: center;
     overflow-y: auto;
-    height: calc(100vh - 111px);
+    padding: 4rem 2rem 1rem 2rem;
   }
 }/*# sourceMappingURL=index.css.map */

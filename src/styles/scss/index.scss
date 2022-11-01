@@ -106,11 +106,6 @@ div {
       background-color: $color-bg-dark;
       color: $color-font-white;
     }
-
-    .nav_ul-span {
-      background-color: $color-bg-dark;
-      color: $color-font-white;
-    }
     
     .nav_footer {
       color: $color-font-dark;
@@ -138,11 +133,6 @@ div {
     }
 
     .App_nav-btn {
-      background-color: $color-bg-white;
-      color: $color-font-dark;
-    }
-
-    .nav_ul-span {
       background-color: $color-bg-white;
       color: $color-font-dark;
     }
@@ -243,9 +233,9 @@ div {
 						flex-wrap: wrap;
 
 						li {
-							flex-basis: 25%;
+							flex-basis: 40%;
 							box-sizing: border-box;
-							padding: 1rem;
+							padding: 2rem;
 
 							a {
                 height: 100%;
@@ -278,15 +268,50 @@ div {
 			justify-content: flex-start;
 			align-items: center;
 			text-align: justify;
-			padding: 1rem;
+			padding: 2rem;
       letter-spacing: 1.5px;
+
+      h1 {
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .page_h1-left {
+        text-align: left;
+      }
 		}
 	}
 }
 
 @media (min-width: 720px) {
-	// ~~ NAVBAR
 	.App {
+    // ~~ THEME
+    &#light {
+      .nav_ul {
+        a {
+          text-decoration-color: $color-font-white;
+          .nav_ul-span {
+            background-color: $color-bg-dark;
+            color: $color-font-white;
+          }
+        }
+      }
+    }
+
+    &#dark {
+      .nav_ul {
+        a {
+          text-decoration-color: $color-font-dark;
+          .nav_ul-span {
+            background-color: $color-bg-white;
+            color: $color-font-dark;
+          }
+        }
+      }
+    }
+
+    // ~~ NAVBAR
 		.App_main {
 			display: flex;
 			justify-content: flex-start;
@@ -459,7 +484,7 @@ div {
 				justify-content: flex-start;
 				align-items: center;
 				overflow-y: auto;
-				height: calc(100vh - 111px);
+        padding: 4rem 2rem 1rem 2rem;
 			}
 		}
 	}

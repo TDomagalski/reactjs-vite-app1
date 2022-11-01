@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TomDomLogo from '../assets/TomDomLogo';
-import NavAccountSVG from '../assets/NavAccountSVG';
+import NavUserSVG from '../assets/NavUserSVG';
 import NavContactSVG from '../assets/NavContactSVG';
 import NavScoreSVG from '../assets/NavScoreSVG';
 import NavStatsSVG from '../assets/NavStatsSVG';
@@ -18,8 +18,8 @@ export default function Navigation() {
         <ul className="nav_ul">
           <li>
             <Link to="/account">
-              <NavAccountSVG />
-              <span className="nav_ul-span">Create Account</span>
+              <NavUserSVG />
+              <span className="nav_ul-span">User</span>
             </Link>
           </li>
           <li>
@@ -31,7 +31,7 @@ export default function Navigation() {
           <li>
             <Link to="/stats">
               <NavStatsSVG />
-              <span className="nav_ul-span">Statistics</span>
+              <span className="nav_ul-span">Stats</span>
             </Link>
           </li>
           <li>
@@ -43,7 +43,7 @@ export default function Navigation() {
         </ul>
       </nav>
       <div className="nav_footer">
-        <h6>TomDom Corp.</h6>
+        <h6>TomDom Corporation</h6>
       </div>
     </header>
   );
