@@ -100,8 +100,11 @@ div {
 .App#light a {
   color: #242424;
 }
+.App#light .btn_theme {
+  background-color: #242424;
+}
 .App#light .btn_theme .btn_theme-circle {
-  background-color: #228B22;
+  background-color: #f3ebf6;
   left: calc(100% - 35px);
 }
 .App#light .App_nav-btn {
@@ -125,7 +128,7 @@ div {
   color: #f3ebf6;
 }
 .App#dark .btn_theme-circle {
-  background-color: #242424;
+  background-color: #228B22;
 }
 .App#dark .App_nav-btn {
   background-color: #f3ebf6;
@@ -155,7 +158,7 @@ div {
   border: none;
   background-color: #f3ebf6;
   border-radius: 50px;
-  border: 2px solid #8f8a90;
+  border: 1px solid #8f8a90;
   padding: 5px 10px;
   position: relative;
   -webkit-transition: 0.25s ease-in-out;
@@ -322,9 +325,9 @@ div {
   .App .App_main #App_navigation .App_nav-btn {
     position: absolute;
     top: 1px;
-    right: -51px;
-    width: 50px;
-    height: 50px;
+    right: -41px;
+    width: 40px;
+    height: 40px;
     border-top: none;
     border-bottom: 1px solid #8f8a90;
     border-right: 1px solid #8f8a90;
@@ -429,8 +432,7 @@ div {
     margin-bottom: 0;
   }
   .App .App_main #App_navigation header .nav_footer {
-    -ms-flex-preferred-size: 10%;
-        flex-basis: 10%;
+    width: 100%;
   }
   .App .App_main #App_content {
     -webkit-box-orient: vertical;

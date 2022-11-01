@@ -13,10 +13,14 @@ export default function Navigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">
+              <span>About</span>
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">
+              <span>Contact</span>
+            </Link>
           </li>
         </ul>
       </nav>

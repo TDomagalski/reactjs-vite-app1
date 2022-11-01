@@ -94,8 +94,9 @@ div {
 		}
 
 		.btn_theme {
+      background-color: $color-bg-dark;
 			.btn_theme-circle {
-				background-color: $color-bg-green;
+				background-color: $color-bg-white;
 				left: calc(100% - (25px + 10px));
 			}
 		}
@@ -122,7 +123,7 @@ div {
 		}
 
     .btn_theme-circle {
-      background-color: $color-bg-dark;
+      background-color: $color-bg-green;
     }
 
     .App_nav-btn {
@@ -149,7 +150,7 @@ div {
 			border: none;
 			background-color: $color-bg-white;
 			border-radius: 50px;
-      border: 2px solid $color-border-default;
+      border: 1px solid $color-border-default;
 			padding: 5px 10px;
 			position: relative;
 			transition: $transition250 ease-in-out;
@@ -276,9 +277,9 @@ div {
         .App_nav-btn {
           position: absolute;
           top: 1px;
-          right: -51px;
-          width: 50px;
-          height: 50px;
+          right: -41px;
+          width: 40px;
+          height: 40px;
           border-top: none;
           border-bottom: 1px solid $color-border-default;
           border-right: 1px solid $color-border-default;
@@ -361,7 +362,7 @@ div {
 						}
 					}
 					.nav_footer {
-						flex-basis: 10%;
+						width: 100%;
 					}
 				}
 			}
