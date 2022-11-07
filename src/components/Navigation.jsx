@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import TomDomLogo from '../assets/TomDomLogo';
 import NavUserSVG from '../assets/NavUserSVG';
 import NavContactSVG from '../assets/NavContactSVG';
@@ -17,28 +17,28 @@ export default function Navigation() {
       <nav>
         <ul className="nav_ul">
           <li>
-            <Link to="/account">
+            <NavLink to="/account">
               <NavUserSVG />
               <span className="nav_ul-span">User</span>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/score">
+            <NavLink to="/score">
               <NavScoreSVG />
               <span className="nav_ul-span">Score</span>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/stats">
+            <NavLink to="/stats">
               <NavStatsSVG />
               <span className="nav_ul-span">Stats</span>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">
+            <NavLink to="/contact">
               <NavContactSVG />
               <span className="nav_ul-span">Contact</span>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

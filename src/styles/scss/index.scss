@@ -267,6 +267,11 @@ div {
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: stretch;
+                text-decoration: none;
+
+                &.active {
+                  color: $color-bg-green;
+                }
 							}
 						}
 					}
@@ -367,6 +372,13 @@ div {
       .nav_ul {
         a {
           text-decoration-color: $color-font-dark;
+
+          // &.active {
+          //   span {
+          //     background-color: $color-bg-green;
+          //   }
+          // }
+
           .nav_ul-span {
             background-color: $color-bg-white;
             color: $color-font-dark;
@@ -390,7 +402,6 @@ div {
 				border-bottom: none;
 				box-sizing: border-box;
 				border-right: 1px solid $color-border-default;
-        // transition: $transition250 ease-in-out;
         transition-property: flex-basis;
         transition-timing-function: ease-in-out;
         transition-duration: $transition250;
@@ -528,6 +539,11 @@ div {
 								}
 
                 a {
+                  &.active {
+                    span {
+                      background-color: $color-bg-green;
+                    }
+                  }
                   svg {
                     width: 40px;
                     height: auto;

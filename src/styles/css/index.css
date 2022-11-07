@@ -302,6 +302,10 @@ div {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  text-decoration: none;
+}
+.App .App_main #App_navigation header nav ul li a.active {
+  color: #228B22;
 }
 .App .App_main #App_navigation header .nav_footer {
   width: 100%;
@@ -594,6 +598,9 @@ div {
   }
   .App .App_main #App_navigation header nav ul li:last-of-type {
     margin-bottom: 0;
+  }
+  .App .App_main #App_navigation header nav ul li a.active span {
+    background-color: #228B22;
   }
   .App .App_main #App_navigation header nav ul li a svg {
     width: 40px;
