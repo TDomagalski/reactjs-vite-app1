@@ -6,19 +6,10 @@ export default function PageAccount() {
       <h1>Register Account</h1>
       <div className="form_container">
         <form className="form_register">
-          <input
-            className="form_field"
-            placeholder="First Name"
-            name="firstName"
-          />
-          <input
-            className="form_field"
-            placeholder="Last Name"
-            name="lastName"
-          />
-          <input className="form_field" placeholder="Email" name="email" />
+          <input className="form_field" placeholder="Nick" name="nick" />
+          <input className="form_field" placeholder="email" name="email" />
           <button className="form_field" type="submit">
-            Register
+            Submit
           </button>
         </form>
       </div>

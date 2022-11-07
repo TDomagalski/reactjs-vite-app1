@@ -124,20 +124,6 @@ div {
 }
 .App#light .form_field {
   background-color: #242424;
-}
-.App#light .form_field::-webkit-input-placeholder {
-  color: #f3ebf6;
-}
-.App#light .form_field::-moz-placeholder {
-  color: #f3ebf6;
-}
-.App#light .form_field:-ms-input-placeholder {
-  color: #f3ebf6;
-}
-.App#light .form_field::-ms-input-placeholder {
-  color: #f3ebf6;
-}
-.App#light .form_field::placeholder {
   color: #f3ebf6;
 }
 .App#dark {
@@ -172,20 +158,6 @@ div {
 }
 .App#dark .form_field {
   background-color: #f3ebf6;
-}
-.App#dark .form_field::-webkit-input-placeholder {
-  color: #242424;
-}
-.App#dark .form_field::-moz-placeholder {
-  color: #242424;
-}
-.App#dark .form_field:-ms-input-placeholder {
-  color: #242424;
-}
-.App#dark .form_field::-ms-input-placeholder {
-  color: #242424;
-}
-.App#dark .form_field::placeholder {
   color: #242424;
 }
 .App .App_optionbar {

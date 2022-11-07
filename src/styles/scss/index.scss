@@ -124,10 +124,7 @@ div {
 
     .form_field {
       background-color: $color-bg-dark;
-      
-      &::placeholder {
-        color: $color-font-white
-      }
+      color: $color-bg-white;
     }
 	}
 
@@ -168,10 +165,7 @@ div {
 
     .form_field {
       background-color: $color-bg-white;
-
-      &::placeholder {
-        color: $color-font-dark
-      }
+      color: $color-bg-dark;
     }
 	}
 
