@@ -344,7 +344,7 @@ div {
   width: 100%;
   margin: 1rem 0;
 }
-.App .App_main .form_container form.form_register {
+.App .App_main .form_container form.form_register, .App .App_main .form_container form.form_contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,7 +359,7 @@ div {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-.App .App_main .form_container form.form_register .form_field {
+.App .App_main .form_container form.form_register .form_field, .App .App_main .form_container form.form_contact .form_field {
   margin-bottom: 1rem;
   padding: 1rem 0;
   font-size: 1rem;
@@ -371,7 +371,7 @@ div {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-.App .App_main .form_container form.form_register button.form_field {
+.App .App_main .form_container form.form_register button.form_field, .App .App_main .form_container form.form_contact button.form_field {
   background-color: #228B22;
   border: none;
 }

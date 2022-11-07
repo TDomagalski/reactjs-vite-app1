@@ -311,7 +311,7 @@ div {
       
       form {
 
-        &.form_register {
+        &.form_register, &.form_contact {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
