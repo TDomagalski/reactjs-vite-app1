@@ -366,15 +366,20 @@ div {
 .App .App_main .form_container form.form_register .form_field, .App .App_main .form_container form.form_contact .form_field {
   width: 100%;
   margin-bottom: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;
   border: 1px solid #8f8a90;
   border-radius: 5px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.App .App_main .form_container form.form_register textarea.form_field, .App .App_main .form_container form.form_contact textarea.form_field {
+  min-height: 150px;
 }
 .App .App_main .form_container form.form_register .form_field-btn, .App .App_main .form_container form.form_contact .form_field-btn {
   padding: 1rem 0;

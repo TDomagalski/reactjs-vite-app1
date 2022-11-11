@@ -325,14 +325,21 @@ div {
           .form_field  {
             width: 100%;
             margin-bottom: 1rem;
-            padding: 1rem 0;
+            padding: 1rem;
             font-size: 1rem;
             font-weight: 700;
             letter-spacing: 2px;
-            text-align: center;
+            text-align: left;
             border: 1px solid $color-border-default;
             border-radius: 5px;
             transition: $transition250;
+            box-sizing: border-box;
+          }
+
+          textarea {
+            &.form_field {
+              min-height: 150px;
+            }
           }
 
           .form_field-btn {
