@@ -8,7 +8,9 @@ export default function PageAccount() {
         <form className="form_register">
           <input className="form_field" placeholder="Nick" name="nick" />
           <input className="form_field" placeholder="email" name="email" />
-          <input className="form_field-btn" type="submit" value="Send" />
+          <button className="form_field" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </>

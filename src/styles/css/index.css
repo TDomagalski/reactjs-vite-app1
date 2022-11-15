@@ -344,11 +344,11 @@ div {
 .App .App_main #App_content .page_h1-left {
   text-align: left;
 }
-.App .App_main .form_container {
+.App .App_main #App_content .form_container {
   width: 100%;
   margin: 1rem 0;
 }
-.App .App_main .form_container form.form_register, .App .App_main .form_container form.form_contact {
+.App .App_main #App_content .form_container form.form_register, .App .App_main #App_content .form_container form.form_contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,7 +363,7 @@ div {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-.App .App_main .form_container form.form_register .form_field, .App .App_main .form_container form.form_contact .form_field {
+.App .App_main #App_content .form_container form.form_register .form_field, .App .App_main #App_content .form_container form.form_contact .form_field {
   width: 100%;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -378,10 +378,10 @@ div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.App .App_main .form_container form.form_register textarea.form_field, .App .App_main .form_container form.form_contact textarea.form_field {
+.App .App_main #App_content .form_container form.form_register textarea.form_field, .App .App_main #App_content .form_container form.form_contact textarea.form_field {
   min-height: 150px;
 }
-.App .App_main .form_container form.form_register .form_field-btn, .App .App_main .form_container form.form_contact .form_field-btn {
+.App .App_main #App_content .form_container form.form_register .form_field-btn, .App .App_main #App_content .form_container form.form_contact .form_field-btn {
   padding: 1rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -393,6 +393,48 @@ div {
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
+}
+.App .App_main #App_content .container_score {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.App .App_main #App_content .container_score .score-field {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.App .App_main #App_content .container_score .score-field:first-of-type {
+  margin-top: 1rem;
+}
+.App .App_main #App_content .container_score .score-field:last-of-type {
+  margin-bottom: 0;
+}
+.App .App_main #App_content .container_score .score-field.sfield-red {
+  background-color: #D2001A;
+}
+.App .App_main #App_content .container_score .score-field.sfield-green {
+  background-color: #228B22;
+}
+.App .App_main #App_content .container_score .score-field.sfield-blue {
+  background-color: #034f84;
+}
+.App .App_main #App_content .container_score .score-field.sfield-purple {
+  background-color: #622569;
 }
 
 @media (min-width: 720px) {
@@ -627,6 +669,30 @@ div {
             align-items: center;
     overflow-y: auto;
     padding: 4rem 2rem 1rem 2rem;
+  }
+  .App .App_main #App_content button.btn_score-add {
+    margin: 1rem 0 4rem 0;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .App .App_main #App_content .container_score {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .App .App_main #App_content .container_score .score-field {
+    margin-bottom: 0;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .App .App_main #App_content .container_score .score-field:first-of-type {
+    margin-top: 0;
   }
   .App .App_main #App_content .form_container {
     width: 50%;
