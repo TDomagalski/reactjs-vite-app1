@@ -439,16 +439,14 @@ div {
 
 @media (min-width: 720px) {
   .App#light .nav_ul a {
-    -webkit-text-decoration-color: #f3ebf6;
-            text-decoration-color: #f3ebf6;
+    text-decoration-color: #f3ebf6;
   }
   .App#light .nav_ul a .nav_ul-span {
     background-color: #242424;
     color: #f3ebf6;
   }
   .App#dark .nav_ul a {
-    -webkit-text-decoration-color: #242424;
-            text-decoration-color: #242424;
+    text-decoration-color: #242424;
   }
   .App#dark .nav_ul a .nav_ul-span {
     background-color: #f3ebf6;
